@@ -38,7 +38,7 @@ cache:
   cachedAccountIdsMaxItems: 1000
   cachedSessionsMaxItems: 1000
   cachedBodiesExpiry: 3600
-  enabled: true
+  enabled: false
 sessions:
   enableDb: true
   autoLoad: true

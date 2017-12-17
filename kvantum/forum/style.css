@@ -1,119 +1,123 @@
+#myFooter .container{
+    text-align: center;
+}
+#myFooter .footer-copyright{
+    text-align: center;
+    color: #777;
+}
+#myFooter ul{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 18px;
+}
+#myFooter a{
+    color: #282b2d;
+    font-size: 18px;
+}
+#myFooter li{
+    display: inline-block;
+    margin: 0px 15px;
+    line-height: 2;
+}
+#myFooter .footer-social{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #eee;
+}
+#myFooter .fa{
+    font-size: 36px;
+    margin-right: 15px;
+    margin-left: 20px;
+    background-color: white;
+    color: #d0d0d0;
+    border-radius: 51%;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 43px;
+    text-decoration: none;
+    transition:color 0.2s;
+}
+#myFooter .fa-facebook:hover{
+    color: #2b55ff;
+}
+#myFooter .fa-facebook:focus{
+    color: #2b55ff;
+}
+#myFooter .fa-google-plus:hover{
+    color:red;
+}
+#myFooter .fa-google-plus:focus{
+    color:red;
+}
+#myFooter .fa-twitter:hover{
+    color: #00aced;
+}
+#myFooter .fa-twitter:focus{
+    color:#00aced;
+}
+.intro_info .col-lg-4
+{
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.intro_info .col-lg-4 p
+{
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+.info_intro h2
+{
+    font-weight: normal;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}
+
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
 body {
-    background-color: #4E4E4E;
-    text-align: center;         /* make sure IE centers the page too */
-}
-
-#wrapper {
-    width: 900px;
-    margin: 0 auto;             /* center the page */
-}
-
-#content {
-    background-color: #fff;
-    border: 1px solid #000;
-    float: left;
-    font-family: Arial;
-    padding: 20px 30px;
-    text-align: left;
-    width: 100%;                /* fill up the entire div */
-}
-
-#menu {
-    float: left;
-    border: 1px solid #000;
-    border-bottom: none;        /* avoid a double border */
-    clear: both;                /* clear:both makes sure the content div doesn't float next to this one but stays under it */
-    width:100%;
-    height:20px;
-    padding: 0 30px;
-    background-color: #FFF;
-    text-align: left;
-    font-size: 85%;
-}
-
-#menu a:hover {
-    background-color: #009FC1;
-}
-
-#userbar {
-    background-color: #fff;
-    float: right;
-    width: 250px;
-}
-
-#footer {
-    clear: both;
-}
-
-/* begin table styles */
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-table a {
-    color: #000;
-}
-
-table a:hover {
-    color:#373737;
-    text-decoration: none;
-}
-
-th {
-    background-color: #B40E1F;
-    color: #F0F0F0;
-}
-
-td {
-    padding: 5px;
-}
-
-/* Begin font styles */
-h1, #footer {
-    font-family: Arial;
-    color: #F1F3F1;
-}
-
-h3 {margin: 0; padding: 0;}
-
-/* Menu styles */
-.item {
-    background-color: #00728B;
-    border: 1px solid #032472;
-    color: #FFF;
-    font-family: Arial;
-    padding: 3px;
-    text-decoration: none;
-}
-
-.leftpart {
-    width: 70%;
-}
-
-.rightpart {
-    width: 30%;
-}
-
-.small {
-    font-size: 75%;
-    color: #373737;
-}
-#footer {
-    font-size: 65%;
-    padding: 3px 0 0 0;
-}
-
-.topic-post {
-    height: 100px;
-    overflow: auto;
-}
-
-.post-content {
-    padding: 30px;
-}
-
-textarea {
-    width: 500px;
-    height: 200px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
 }

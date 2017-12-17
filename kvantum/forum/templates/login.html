@@ -1,0 +1,280 @@
+<style>
+    #register, #forgot {
+        display: none;
+    }
+
+    #register, #forgot {
+        display: none;
+    }
+
+    input {
+        border-radius: 0 !important;
+    }
+
+    #register, #forgot, #login {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        background-color: #fff;
+        width: 500px;
+
+        /*
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -40%);
+        transform: translate(-50%, -40%);*/
+    }
+
+    .form-wrap {
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .btn.btn-custom {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .forget-back, .need-acc, .forget {
+        font-size: 13px;
+        text-align: center;
+        display: block;
+    }
+
+    .btn-custom {
+        border-radius: 0;
+    }
+
+    .btn-custom:hover,
+    .btn-custom:focus {
+        color: #fff;
+    }
+
+    .non-triggered
+    {
+        display: none;
+        border-radius: 0 !important;
+    }
+</style>
+<br/><br/><br/>
+<div class="container-fluid">
+    <div id="errorAlert" class="alert non-triggered alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <strong id="errorIntro">Intro</strong> <span id="errorBody">Body</span>
+    </div>
+    <div class="row">
+        <div class="col" id="login">
+            <div class="container">
+                <div class="row">
+                    <div class="mx-auto">
+                        <div class="form-wrap">
+                            <h1>Login</h1>
+                            <form role="form" method="post" id="login-form" autocomplete="off">
+                                <input type="hidden" name="login" value="true"/>
+                                <div class="form-group">
+                                    <label for="username" class="sr-only">
+                                        Username
+                                    </label>
+                                    <input type="text" name="username" id="username" class="form-control"
+                                           placeholder="Username" required/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="sr-only">
+                                        Password
+                                    </label>
+                                    <input type="password" name="password" id="password" class="form-control"
+                                           placeholder="password" required/>
+                                </div>
+                                <input type="button" id="btn-login" class="btn btn-custom btn-dark btn-lg btn-block"
+                                       value="Login"/>
+                            </form>
+
+                            <a href="javascript:;" class="forget">Forgot your password?</a>
+                            <a href="javascript:;" class="need-acc">Need an account?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" id="forgot">
+            <div class="container">
+                <div class="row">
+                    <div class="mx-auto">
+                        <div class="form-wrap">
+                            <h1>Password Reset</h1>
+                            <form role="form" action="#" method="post" id="forgot-form" autocomplete="off">
+                                <input type="hidden" name="reset" value="true"/>
+                                <div class="form-group">
+                                    <label for="email" class="sr-only">
+                                        Email
+                                    </label>
+                                    <input disabled type="email" name="email" id="email" class="form-control"
+                                           placeholder="your@email.com"/>
+                                </div>
+
+                                <input type="submit" id="btn-forgot" class="btn btn-dark btn-custom btn-lg btn-block"
+                                       value="Send"/>
+                            </form>
+                            <a href="javascript:;" class="forget-back">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col" id="register">
+            <div class="container">
+                <div class="row">
+                    <div class="mx-auto">
+                        <div class="form-wrap">
+                            <h1>Register</h1>
+                            <form role="form" method="post" id="register-form" autocomplete="off">
+                                <input type="hidden" name="register" value="true"/>
+                                <div class="form-group">
+                                    <label for="rusername" class="sr-only">
+                                        Username
+                                    </label>
+                                    <input required="true" type="text" name="username" id="rusername"
+                                           class="form-control"
+                                           placeholder="Username"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="register-email" class="sr-only">
+                                        Email
+                                    </label>
+                                    <input required="true" type="email" name="email" id="register-email"
+                                           class="form-control" placeholder="your@email.com"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="rpassword" class="sr-only">
+                                        Password
+                                    </label>
+                                    <input type="password" required="true" name="password" id="rpassword"
+                                           class="form-control" placeholder="Password"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="repeat-password" class="sr-only">
+                                        Repeat Password
+                                    </label>
+                                    <input type="password" required="true" name="repeat-password"
+                                           id="repeat-password"
+                                           class="form-control" placeholder="Repeat Password"/>
+                                </div>
+                                <label for="btn-register">By pressing "Register" you accept our Terms of Service -
+                                    Click <a
+                                            target="_blank"
+                                            href="https://intellectualsites.com/index?p=tos">here</a> to read
+                                </label>
+                                <input type="button" id="btn-register" class="btn btn-custom btn-dark btn-lg btn-block"
+                                       value="Register"/>
+                            </form>
+                            <a href="javascript:;" class="register-back">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+<footer id="myFooter">
+    <div class="container">
+        <ul>
+            <li><a href="#">Company Information</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Terms of service</a></li>
+        </ul>
+        <p class="footer-copyright">&copy; 2017 {{meta.title}}</p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+<script>
+    function dump(obj) {
+        var out = '';
+        for (var i in obj) {
+            out += i + ": " + obj[i] + "\n";
+        }
+        alert(out);
+    }
+    jQuery(document).ready(function () {
+        jQuery('.need-acc').click(function() {
+            jQuery('#login').fadeOut(600, function() {
+                jQuery('#register').fadeIn(600);
+            });
+        });
+        jQuery('.forget').click(function() {
+            jQuery('#login').fadeOut(600, function() {
+                jQuery('#forgot').fadeIn(600);
+            });
+        });
+        jQuery('.forget-back').click(function() {
+            jQuery('#forgot').fadeOut(600, function() {
+                jQuery('#login').fadeIn(600);
+            });
+        });
+        jQuery('.register-back').click(function() {
+            jQuery('#register').fadeOut(600, function() {
+                jQuery('#login').fadeIn(600);
+            })
+        });
+        jQuery('input#btn-login').click(function() {
+            jQuery("input").removeClass("is-invalid");
+            jQuery.ajax({
+                type: "POST",
+                url: "internal/login",
+                data: jQuery("#login-form").serialize(),
+                success: function(data)
+                {
+                    if (data.status.statusCode == 0) {
+                        $(location).attr('href', data.redirect);
+                    } else {
+                        jQuery("#errorIntro").text("Login Failed: ");
+                        jQuery("#errorBody").text(data.message);
+                        jQuery("#" + data.internalMessage).addClass("is-invalid");
+                        jQuery("#errorAlert").show();
+                    }
+                }
+            });
+        });
+        jQuery('input#btn-register').click(function() {
+            jQuery("input").removeClass("is-invalid");
+            jQuery.ajax({
+                type: "POST",
+                url: "internal/register",
+                data: jQuery("#register-form").serialize(),
+                success: function(data)
+                {
+                    if (data.status.statusCode == 0) {
+                        $(location).attr('href', data.redirect);
+                    } else {
+                        jQuery("#errorIntro").text("Registration Failed: ");
+                        jQuery("#errorBody").text(data.message);
+                        jQuery("#" + data.internalMessage).addClass("is-invalid");
+                        jQuery("#errorAlert").show();
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

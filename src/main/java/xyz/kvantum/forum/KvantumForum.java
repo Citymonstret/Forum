@@ -5,9 +5,12 @@ import lombok.SneakyThrows;
 import xyz.kvantum.forum.database.ForumDatabase;
 import xyz.kvantum.forum.files.ForumFileSystem;
 import xyz.kvantum.forum.views.IndexView;
+import xyz.kvantum.forum.views.LoginHandler;
+import xyz.kvantum.forum.views.RegistrationHandler;
 import xyz.kvantum.forum.views.Stylesheets;
 import xyz.kvantum.server.api.config.CoreConfig;
 import xyz.kvantum.server.api.core.Kvantum;
+import xyz.kvantum.server.api.core.ServerImplementation;
 import xyz.kvantum.server.api.util.RequestManager;
 import xyz.kvantum.server.implementation.DefaultLogWrapper;
 import xyz.kvantum.server.implementation.ServerContext;
@@ -80,6 +83,10 @@ public final class KvantumForum
     {
         new Stylesheets( this.forumFileSystem );
         new IndexView( this.forumFileSystem );
+        new LoginHandler( ServerImplementation.getImplementation()
+                .getApplicationStructure().getAccountManager() );
+        new RegistrationHandler( ServerImplementation.getImplementation()
+                .getApplicationStructure().getAccountManager() );
     }
 
     @SneakyThrows
